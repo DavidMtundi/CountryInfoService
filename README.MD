@@ -1,14 +1,14 @@
 
 # Country Information Service
 
-A .NET Core web API that integrates with a SOAP country info service, persists data to MySQL, and provides RESTful CRUD operations.
+A .NET Core web API that integrates with a SOAP country info service, persists data to Postgres, and provides RESTful CRUD operations.
 
 ## Features
 
 - 🚀 REST API endpoints for country information management
 - 🔄 SOAP service integration (Oorsprong Country Info Service)
 - 🐳 Docker & Docker Compose ready
-- 📦 MySQL database integration
+- 📦 Postgres database integration
 - 📄 Open API documentation
 - 🔒 Error handling & logging
 
