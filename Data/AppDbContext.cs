@@ -11,7 +11,6 @@ public class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        // Optional: Add seed data or constraints
         modelBuilder.Entity<Country>().HasData(
             new Country { Id = 1, Name = "Sample", ISOCode = "XX" }
         );
