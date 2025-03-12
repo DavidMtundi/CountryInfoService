@@ -37,11 +37,11 @@ The application will be available at:
 🌐 `http://localhost:8080/swagger`
 
 ### 3. Verify Services
-| Service        | Port  | URL                              |
-|----------------|-------|----------------------------------|
-| API            | 8080  | http://localhost:8080            |
-| MySQL Database | 3306  | mysql://localhost:3306/countryinfo |
-| Adminer        | 8081  | http://localhost:8081            |
+| Service           | Port | URL                                   |
+|-------------------|------|---------------------------------------|
+| API               | 8080 | http://localhost:8080                 |
+| Postgres Database | 5432 | postgres://localhost:5432/countryinfo |
+| Adminer           | 8081 | http://localhost:8081                 |
 
 ## API Documentation
 
@@ -118,7 +118,7 @@ dotnet ef database update
 ## Troubleshooting
 
 Common Issues:
-- **Port conflicts**: Stop services using ports 8080, 3306
+- **Port conflicts**: Stop services using ports 8080, 5432
 - **Database connection issues**:
   ```bash
   docker-compose logs db
