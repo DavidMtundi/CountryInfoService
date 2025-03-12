@@ -1,0 +1,6 @@
+@CountryInfoService_HostAddress = http://localhost:5181
+
+GET {{CountryInfoService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
