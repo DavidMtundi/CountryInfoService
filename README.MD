@@ -23,7 +23,7 @@ A .NET Core web API that integrates with a SOAP country info service, persists d
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/country-info-service.git
+git clone https://github.com/DavidMtundi/CountryInfoService
 cd country-info-service
 ```
 
@@ -68,7 +68,7 @@ POST /api/country
   "phoneCode": "255",
   "continentCode": "AF",
   "currencyIsoCode": "TZS",
-  "countryFlag": "🇹🇿"
+  "countryFlag": "url"
 }
 ```
 
