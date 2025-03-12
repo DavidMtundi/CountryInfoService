@@ -29,6 +29,7 @@ cd country-info-service
 
 ### 2. Run with Docker Compose
 ```bash
+dotnet ef database update
 docker-compose up --build
 ```
 
