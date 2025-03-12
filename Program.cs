@@ -1,4 +1,5 @@
 using CountryInfoService.Core.Interfaces;
+using CountryInfoService.Core.Mapping;
 using CountryInfoService.Core.Services;
 using CountryInfoService.Data;
 using CountryInfoService.Infrastructure.Clients;
@@ -15,7 +16,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Add automapper
-builder.Services.AddAutoMapper(typeof(Program));
+//builder.Services.AddAutoMapper(typeof(CountryMappingProfile));
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
 // Postgres Db
 builder.Services.AddDbContext<AppDbContext>(options=>
@@ -41,11 +43,12 @@ builder.Services.AddControllers();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
-//app.UseHttpsRedirection();
+//}
 
+//app.UseHttpsRedirection();
+app.MapControllers();
 app.Run();

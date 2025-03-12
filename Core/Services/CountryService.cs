@@ -18,6 +18,7 @@ public class CountryService(
     {
         try
         {
+            // Convert the country name to Sentence case
             var normalizedName = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(countryName.ToLower());
             
             var isoCode = await soapClient.GetCountryIsoCodeAsync(normalizedName);
@@ -26,7 +27,7 @@ public class CountryService(
 
             var countryInfo = await soapClient.GetFullCountryInfoAsync(isoCode);
             
-            var countryEntity = mapper.Map<Country>(countryInfo);
+            var countryEntity = mapper.Map<Country>(countryInfo.Body.FullCountryInfoResult);
             var createdEntity = await repository.AddAsync(countryEntity);
             
             return mapper.Map<CountryResponseDto>(createdEntity);

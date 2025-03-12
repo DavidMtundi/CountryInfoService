@@ -34,6 +34,11 @@ public class CountryController:ControllerBase
         try
         {
             var result = await _countryService.GetAndSaveCountryInfoAsync(createDto.Name);
+            if (result == null)
+            {
+                _logger.LogWarning("Country not found");
+                return NotFound("Country not found");
+            }
             return CreatedAtAction(nameof(GetById), new { id = result.Id }, result);
         }
         catch (ArgumentException ex)
@@ -48,6 +53,28 @@ public class CountryController:ControllerBase
         }
     }
     
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<CountryResponseDto>>> GetAll()
+    {
+        try
+        {
+            var countries = await _countryService.GetAllCountriesAsync();
+            if (!countries.Any())
+            {
+                _logger.LogInformation("No countries found in the database");
+                return Ok(new List<CountryResponseDto>());
+            }
+
+            _logger.LogInformation("Successfully retrieved {Count} countries", countries.Count());
+            return Ok(countries);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error occurred while retrieving all countries");
+            return StatusCode(500, "Internal server error occurred while retrieving countries");
+        }
+    }
+
     [HttpGet("{id}")]
     public async Task<ActionResult<CountryResponseDto>> GetById(int id)
     {

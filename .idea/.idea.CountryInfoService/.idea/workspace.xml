@@ -10,9 +10,9 @@
   <component name="ChangeListManager">
     <list default="true" id="49bfeb8e-5276-4bf2-8bde-5f46a8ca1813" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CountryInfoService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CountryInfoService/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/AppDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/CountryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/CountryController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Services/CountryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Services/CountryService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +37,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.CountryInfoService: http.executor": "Run",
+    ".NET Launch Settings Profile.CountryInfoService: http.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
@@ -113,7 +113,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741755741326</updated>
-      <workItem from="1741755742350" duration="7869000" />
+      <workItem from="1741755742350" duration="9490000" />
     </task>
     <servers />
   </component>
@@ -139,6 +139,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Controllers/CountryController.cs</url>
+          <line>60</line>
+          <properties documentPath="$PROJECT_DIR$/Controllers/CountryController.cs" containingFunctionPresentation="Method 'GetAll'">
+            <startOffsets>
+              <option value="1786" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1847" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Core/Services/CountryService.cs</url>
+          <line>27</line>
+          <properties documentPath="$PROJECT_DIR$/Core/Services/CountryService.cs" containingFunctionPresentation="Method 'GetAndSaveCountryInfoAsync'">
+            <startOffsets>
+              <option value="950" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1018" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
