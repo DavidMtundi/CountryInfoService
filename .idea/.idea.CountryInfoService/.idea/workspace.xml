@@ -9,19 +9,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49bfeb8e-5276-4bf2-8bde-5f46a8ca1813" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Controllers/CountryController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Interfaces/ICountryService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Interfaces/IRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Models/Dtos/CountryCreateDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Models/Dtos/CountryResponseDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Models/Entities/Country.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Services/CountryService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/AppDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Clients/CountryInfoSoapClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Repositories/CountryRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CountryInfoService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CountryInfoService/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Services/CountryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Services/CountryService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CountryInfoService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CountryInfoService.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +113,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741755741326</updated>
-      <workItem from="1741755742350" duration="5542000" />
+      <workItem from="1741755742350" duration="6376000" />
     </task>
     <servers />
   </component>

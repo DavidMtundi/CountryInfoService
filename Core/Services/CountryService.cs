@@ -52,7 +52,7 @@ public class CountryService(
         }
     }
 
-    public async Task<CountryResponseDto>? GetCountryByIdAsync(int id)
+    public async Task<CountryResponseDto?> GetCountryByIdAsync(int id)
     {
         try
         {
