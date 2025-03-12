@@ -33,7 +33,7 @@ docker-compose up --build
 ```
 
 The application will be available at:  
-🌐 `http://localhost:8080`
+🌐 `http://localhost:8080/swagger`
 
 ### 3. Verify Services
 | Service        | Port  | URL                              |

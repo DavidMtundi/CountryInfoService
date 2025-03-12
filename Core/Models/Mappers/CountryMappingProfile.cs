@@ -1,4 +1,5 @@
 using AutoMapper;
+using CountryInfoService.Models.Dtos;
 using CountryInfoService.Models.Entities;
 using ServiceReference;
 
@@ -16,5 +17,11 @@ public class CountryMappingProfile : Profile
             .ForMember(dest => dest.ContinentCode, opt => opt.MapFrom(src => src.sContinentCode))
             .ForMember(dest => dest.CurrencyISOCode, opt => opt.MapFrom(src => src.sCurrencyISOCode))
             .ForMember(dest => dest.CountryFlag, opt => opt.MapFrom(src => src.sCountryFlag));
+       
+        CreateMap<Country, CountryResponseDto>();
+        CreateMap<CountryResponseDto, Country>();
+        
+        CreateMap<Country, CountryUpdateDto>();
+        CreateMap<CountryUpdateDto, Country>();
     }
 }

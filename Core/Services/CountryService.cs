@@ -28,6 +28,12 @@ public class CountryService(
             var countryInfo = await soapClient.GetFullCountryInfoAsync(isoCode);
             
             var countryEntity = mapper.Map<Country>(countryInfo.Body.FullCountryInfoResult);
+
+            if (string.IsNullOrEmpty(countryEntity.CapitalCity)){
+                logger.LogError("Error retrieving country info for {CountryName}", countryName);
+                return null;
+            }
+            
             var createdEntity = await repository.AddAsync(countryEntity);
             
             return mapper.Map<CountryResponseDto>(createdEntity);
@@ -70,16 +76,21 @@ public class CountryService(
         }
     }
 
-    public async Task UpdateCountryAsync(int id, CountryCreateDto countryDto)
+    public async Task UpdateCountryAsync(int id, CountryUpdateDto updateDto)
     {
         try
         {
+            if (updateDto == null)
+                throw new ArgumentNullException(nameof(updateDto));
+
             var existingCountry = await repository.GetByIdAsync(id);
             if (existingCountry == null)
                 throw new KeyNotFoundException($"Country with ID {id} not found");
 
-            mapper.Map(countryDto, existingCountry);
+            mapper.Map(updateDto, existingCountry);
             await repository.UpdateAsync(existingCountry);
+        
+            logger.LogInformation("Country with ID {CountryId} updated successfully", id);
         }
         catch (Exception ex)
         {
@@ -87,7 +98,6 @@ public class CountryService(
             throw;
         }
     }
-
     public async Task DeleteCountryAsync(int id)
     {
         try

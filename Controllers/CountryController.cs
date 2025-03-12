@@ -98,7 +98,7 @@ public class CountryController:ControllerBase
     }
     
     [HttpPut("{id}")]
-    public async Task<IActionResult> Update(int id, [FromBody] CountryCreateDto updateDto)
+    public async Task<IActionResult> Update(int id, [FromBody] CountryUpdateDto updateDto)
     {
         try
         {

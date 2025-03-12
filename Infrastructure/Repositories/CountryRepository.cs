@@ -35,13 +35,31 @@ public class CountryRepository : IRepository<Country>
         return entity;
     }
 
-    public Task UpdateAsync(Country entity)
+    public async Task UpdateAsync(Country entity)
     {
-        throw new NotImplementedException();
+        try
+        {
+            _context.Entry(entity).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error updating country with ID {CountryId}", entity.Id);
+            throw;
+        }
     }
 
-    public Task DeleteAsync(Country entity)
+    public async Task DeleteAsync(Country entity)
     {
-        throw new NotImplementedException();
+        try
+        {
+            _context.Countries.Remove(entity);
+            await _context.SaveChangesAsync();
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error deleting country with ID {CountryId}", entity.Id);
+            throw;
+        }
     }
 }
